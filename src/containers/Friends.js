@@ -34,7 +34,7 @@ class Friends extends Component {
                 <Navbar heading={'CodeMyMobile- Task'}/>
                 <div className="container-fluid containers">
                 <div className="row users">All Friends</div>
-                <UserTable data={this.state.friendList}   />
+                {Array.isArray(this.state.friendList)&& this.state.friendList.length>0?<UserTable data={this.state.friendList}   />:<div className="row friends">No Friends</div>}
                 </div>
             </React.Fragment>
          );

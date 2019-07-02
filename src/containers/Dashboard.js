@@ -29,7 +29,7 @@ class Dashboard extends Component {
                 <Navbar heading={'CodeMyMobile- Task'}/>
                 <div className="container-fluid containers">
                 <div className="row users">All Users</div>
-                <UserTable data={this.state.list}  linking="userTofriends" />
+                {Array.isArray(this.state.list)&& this.state.list.length>0? <UserTable data={this.state.list}  linking="userTofriends" />:<div className="row friends">No user available</div>}
                 </div>
             </React.Fragment>
         );
